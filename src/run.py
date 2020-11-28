@@ -6,7 +6,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    nome = "Mirayr"
+    posts =["Flask Básico", "Flask Intermediário", "Flask Avançado"]
+    return render_template("index.html", nome=nome, posts=posts)
 
 
 if __name__ == '__main__':
