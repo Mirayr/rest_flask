@@ -1,12 +1,12 @@
 #!/usr/bin/python
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-    return "Hello"
+    return jsonify({"message": "Hello!"})
 
 
 if __name__ == '__main__':
